@@ -10,7 +10,12 @@ interface LoginInterface{
     clg_name: String | null,
     roll_no: String,
 }
+interface TokenResponseInterface{
+  access: string;
+  refresh: string;
+  user: LoginInterface;
+}
 
 export {
-  LoginInterface
+  LoginInterface, TokenResponseInterface
 }

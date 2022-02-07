@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RegisterService} from "./register.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {SessionService} from "../../services/session.service";
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
   })
 
   constructor(private registerService: RegisterService,
-              private formBuilder: FormBuilder) {
+              private formBuilder: FormBuilder,
+              private sessionService: SessionService) {
   }
 
   ngOnInit(): void {
@@ -27,7 +29,7 @@ export class RegisterComponent implements OnInit {
     console.log('click')
     console.log(this.registerForm.value)
     this.registerService.register(this.registerForm.value).subscribe(response => {
-      console.log(response);
+      this.sessionService.setSession(response);
     })
   }
 

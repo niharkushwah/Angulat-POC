@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from "./login.service";
 import {FormGroup, Validators, FormBuilder} from "@angular/forms";
+import {SessionService} from "../../services/session.service";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import {FormGroup, Validators, FormBuilder} from "@angular/forms";
 
 
 export class LoginComponent implements OnInit {
-
+  invalidCredentials = false;
 
   loginForm: FormGroup = this.formBuilder.group({
     'email': ['', [Validators.required, Validators.email]],
@@ -18,17 +19,17 @@ export class LoginComponent implements OnInit {
   })
 
   constructor(private loginService: LoginService,
-              private formBuilder: FormBuilder) { }
+              private formBuilder: FormBuilder,
+              private sessionService: SessionService) { }
 
   ngOnInit(): void {
   }
   onSubmit(): void {
     console.log(this.loginForm.value)
     this.loginService.login(this.loginForm.value).subscribe( (response) => {
-      console.log(response);
+      this.sessionService.setSession(response);
     }, () => {
-      // this.invalidCredentials = true;
+      this.invalidCredentials = true;
     });
   }
-
 }
