@@ -1,14 +1,14 @@
 interface RegisterInterface{
-  id: Number,
-  mobile: String,
-  role: Number,
-  email: String,
-  last_login: String | null,
-  is_superuser: Boolean,
-  name: String,
-  is_active: Boolean,
-  clg_name: String | null,
-  roll_no: String,
+  id: number,
+  mobile: string,
+  role: number,
+  email: string,
+  last_login: string | null,
+  is_superuser: boolean,
+  name: string,
+  is_active: boolean,
+  clg_name: string | null,
+  roll_no: string,
 }
 
 export {
