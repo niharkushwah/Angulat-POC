@@ -18,7 +18,21 @@
       <li class="nav-item">
         <a class="nav-link" href="/dashboard/timetable">TimeTable</a>
       </li>
+      <li>
+      <li class="nav-item dropdown" *ngIf="isFaculty">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Upload
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/dashboard/notes/uploadnotes">Notes</a>
+          <a class="dropdown-item" href="#">Notice</a>
+          <a class="dropdown-item" href="#">Time Table</a>
+        </div>
+      </li>
     </ul>
+
+    <!-- Navbar dropdown -->
+
 
     <button class="btn btn-warning my-2 my-sm-0" type="submit" (click)="logout()">Logout</button>
 

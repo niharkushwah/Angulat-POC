@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {RegisterInterface} from "../../../../public/register/register.interface";
 import {SessionService} from "../../../../services/session.service";
 
 @Component({
