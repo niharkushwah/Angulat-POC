@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {SessionService} from "../services/session.service";
 
@@ -16,8 +16,12 @@ export class TokenInterceptor implements HttpInterceptor {
     if (token) {
       request = request.clone({
         setHeaders: {
-          Authorization: 'Bearer ' + token
+          Authorization: 'Bearer ' + token,
         }
+        // headers: new HttpHeaders({
+        //   'Authorization': 'Bearer ' + token,
+        //   'DataServiceVersion': '2.0'
+        // })
       });
     }
 

@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: NotesComponent, children: [
-      {path: '', redirectTo: 'uploadnotes', pathMatch: 'full'},
+      {path: '', redirectTo: 'listnotes', pathMatch: 'full'},
       {path: 'uploadnotes', component: UploadnotesComponent},
       {path: 'listnotes', component: GetnotesComponent},
 

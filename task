@@ -1,0 +1,6 @@
+Task to improve code structure
+
+1. Create separate interface file one for dashboard and one for public as well.
+2. Implement Loader and internet connection not available error.
+3. create separate module for each functionality.
+4. Improve routing.
