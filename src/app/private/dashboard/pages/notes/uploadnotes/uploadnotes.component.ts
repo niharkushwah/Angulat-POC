@@ -61,10 +61,14 @@ export class UploadnotesComponent implements OnInit {
   onSubmit(): void {
     this.uploadNotesForm.value.file = this.fileToUpload;
     this.notesService.postFile(this.uploadNotesForm.value).subscribe(data => {
-      // do something, if upload success
+      window.alert("Notes Uploaded Successfully !");
+      // to reset the form after uploading
+      this.uploadNotesForm.reset();
     }, (error:HttpErrorResponse) => {
       console.log(error);
     });
+
+
 
     // console.log(this.uploadNotesForm.value)
     // this.notesService.uploadnotes(this.uploadNotesForm.value).subscribe(response => {

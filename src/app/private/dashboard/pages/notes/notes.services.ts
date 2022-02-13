@@ -20,17 +20,21 @@ export class NotesService {
     const endpoint = '/notes/notes/';
     const formData: FormData = new FormData();
     formData.append('file', data.file, data.file.name);
-    formData.append('remark', 'abc');
-    formData.append('description','abc');
-    formData.append('subject','abc');
-    formData.append('subject_code','abc');
-    formData.append('year','abc');
-    formData.append('sem','abc');
+    formData.append('remark', data.remark);
+    formData.append('description', data.description);
+    formData.append('subject',data.subject);
+    formData.append('subject_code',data.subject_code);
+    formData.append('year',data.year);
+    formData.append('sem',data.sem);
     return this.httpService
       .post(endpoint, formData);
   }
 
   uploadnotes(formData: uploadnotes): Observable<any> {
     return this.httpService.post('/notes/notes/', formData);
+  }
+// for fetch notes
+  listNotes(): Observable<any> {
+    return this.httpService.get('/notes/notes/');
   }
 }
