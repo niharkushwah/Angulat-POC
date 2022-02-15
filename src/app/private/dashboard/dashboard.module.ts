@@ -9,6 +9,8 @@ import { NoticeComponent } from './pages/notice/notice.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { UploadnoticeComponent } from './pages/notice/uploadnotice/uploadnotice.component';
+import { GetnoticeComponent } from './pages/notice/getnotice/getnotice.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FooterComponent } from './pages/footer/footer.component';
         NoticeComponent,
         TimetableComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        UploadnoticeComponent,
+        GetnoticeComponent
     ],
   exports: [
     NavbarComponent,
