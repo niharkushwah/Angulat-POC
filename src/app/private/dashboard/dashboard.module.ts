@@ -18,12 +18,12 @@ import { GetnoticeComponent } from './pages/notice/getnotice/getnotice.component
         DashboardComponent,
         NotesComponent,
         HomeComponent,
-        NoticeComponent,
+        // NoticeComponent,
         TimetableComponent,
         NavbarComponent,
         FooterComponent,
-        UploadnoticeComponent,
-        GetnoticeComponent
+        // UploadnoticeComponent,
+        // GetnoticeComponent,
     ],
   exports: [
     NavbarComponent,

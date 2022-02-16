@@ -22,7 +22,7 @@ export class SessionService {
     localStorage.setItem('access', data.access);
     localStorage.setItem('refresh', data.refresh);
     localStorage.setItem('user', JSON.stringify(data.user));
-    this.navigate('/dashboard/home');
+    this.navigate('/Dashboard/Home');
   }
 
   endSession(): void{

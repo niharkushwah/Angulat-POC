@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '',   redirectTo: 'login', pathMatch: 'full' },
   // lazy loading
   {
-    path: 'dashboard',  canLoad: [DashboardGuard],
+    path: 'Dashboard',  canLoad: [DashboardGuard],
     loadChildren: () => import('./private/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
 ];

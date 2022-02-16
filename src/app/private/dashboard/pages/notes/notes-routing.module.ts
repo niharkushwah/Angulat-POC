@@ -8,9 +8,9 @@ const routes: Routes = [
   {
     path: '',
     component: NotesComponent, children: [
-      {path: '', redirectTo: 'listnotes', pathMatch: 'full'},
-      {path: 'uploadnotes', component: UploadnotesComponent},
-      {path: 'listnotes', component: GetnotesComponent},
+      {path: '', redirectTo: 'ListNotes', pathMatch: 'full'},
+      {path: 'UploadNotes', component: UploadnotesComponent},
+      {path: 'ListNotes', component: GetnotesComponent},
 
     ]
   }

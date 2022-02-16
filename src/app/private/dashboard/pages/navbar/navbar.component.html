@@ -7,16 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/home">Home</a>
+        <a class="nav-link" routerLink="/dashboard/home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/notes">Notes</a>
+        <a class="nav-link" routerLink="/dashboard/notes">Notes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/notice">Notice</a>
+        <a class="nav-link" routerLink="/Dashboard/Notice/UploadNotes">Notice</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dashboard/timetable">TimeTable</a>
+        <a class="nav-link" routerLink="/dashboard/timetable">TimeTable</a>
       </li>
       <li>
       <li class="nav-item dropdown" *ngIf="isFaculty">
@@ -24,8 +24,8 @@
           Upload
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/dashboard/notes/uploadnotes">Notes</a>
-          <a class="dropdown-item" href="#">Notice</a>
+          <a class="dropdown-item" routerLink="/Dashboard/Notes/UploadNotes">Notes</a>
+          <a class="dropdown-item" routerLink="/Dashboard/Notice/UploadNotice">Notice</a>
           <a class="dropdown-item" href="#">Time Table</a>
         </div>
       </li>

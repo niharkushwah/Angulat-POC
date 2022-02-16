@@ -10,15 +10,19 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent, children: [
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: '', redirectTo: 'Home', pathMatch: 'full'},
       // {path: 'dashboard', component: DashboardComponent},
       // {path: 'notes', component: NotesComponent},
-      {path: 'home', component: HomeComponent},
-      {path: 'notice', component: NoticeComponent},
-      {path: 'timetable', component: TimetableComponent},
+      {path: 'Home', component: HomeComponent},
+      // {path: 'notice', component: NoticeComponent},
+      // {path: 'timetable', component: TimetableComponent},
       {
-        path: 'notes',
+        path: 'Notes',
         loadChildren: () => import('./pages/notes/notes.module').then(m => m.NotesModule)
+      },
+      {
+        path: 'Notice',
+        loadChildren: () => import('./pages/notice/notice.module').then(m => m.NoticeModule)
       },
     ]
   }
