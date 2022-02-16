@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '', component: NoticeComponent, children: [
       {
-        path: '', redirectTo: 'getnotice', pathMatch: 'full'
+        path: '', redirectTo: 'GetNotice', pathMatch: 'full'
       },
       {
         path: 'UploadNotice', component: UploadnoticeComponent

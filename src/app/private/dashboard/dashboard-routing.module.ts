@@ -11,11 +11,7 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent, children: [
       {path: '', redirectTo: 'Home', pathMatch: 'full'},
-      // {path: 'dashboard', component: DashboardComponent},
-      // {path: 'notes', component: NotesComponent},
       {path: 'Home', component: HomeComponent},
-      // {path: 'notice', component: NoticeComponent},
-      // {path: 'timetable', component: TimetableComponent},
       {
         path: 'Notes',
         loadChildren: () => import('./pages/notes/notes.module').then(m => m.NotesModule)

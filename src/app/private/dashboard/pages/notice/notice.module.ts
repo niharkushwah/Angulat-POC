@@ -5,6 +5,8 @@ import { NoticeRoutingModule } from './notice-routing.module';
 import {GetnoticeComponent} from "./getnotice/getnotice.component";
 import {UploadnoticeComponent} from "./uploadnotice/uploadnotice.component";
 import {NoticeComponent} from "./notice.component";
+import {DashboardModule} from "../../dashboard.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import {NoticeComponent} from "./notice.component";
   ],
   imports: [
     CommonModule,
-    NoticeRoutingModule
+    NoticeRoutingModule,
+    DashboardModule,
+    ReactiveFormsModule
   ]
 })
 export class NoticeModule { }
