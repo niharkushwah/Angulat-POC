@@ -22,10 +22,6 @@ export class NoticeService {
     formData.append('file', data.file, data.file.name);
     formData.append('remark', data.remark);
     formData.append('description', data.description);
-    formData.append('subject',data.subject);
-    formData.append('subject_code',data.subject_code);
-    formData.append('year',data.year);
-    formData.append('sem',data.sem);
     return this.httpService
       .post(endpoint, formData);
   }

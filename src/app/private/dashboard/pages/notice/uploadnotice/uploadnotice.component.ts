@@ -32,11 +32,6 @@ export class UploadnoticeComponent implements OnInit {
     'remark': ['', [Validators.required]],
     'description': ['', [Validators.required, Validators.minLength(8)]],
     'file': ['', [Validators.required]],
-    'subject': ['', [Validators.required]],
-    'subject_code': ['', [Validators.required]],
-    'sem': ['', [Validators.required]],
-    'year': ['', [Validators.required]],
-
   })
 
   constructor(private formBuilder: FormBuilder,
