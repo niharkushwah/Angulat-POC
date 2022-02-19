@@ -11,6 +11,8 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { UploadnoticeComponent } from './pages/notice/uploadnotice/uploadnotice.component';
 import { GetnoticeComponent } from './pages/notice/getnotice/getnotice.component';
+import { UploadtimetableComponent } from './pages/timetable/uploadtimetable/uploadtimetable.component';
+import { GettimetableComponent } from './pages/timetable/gettimetable/gettimetable.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { GetnoticeComponent } from './pages/notice/getnotice/getnotice.component
         TimetableComponent,
         NavbarComponent,
         FooterComponent,
+        UploadtimetableComponent,
+        GettimetableComponent,
         // UploadnoticeComponent,
         // GetnoticeComponent,
     ],
