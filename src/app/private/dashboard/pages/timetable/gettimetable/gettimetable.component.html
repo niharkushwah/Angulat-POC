@@ -1,1 +1,22 @@
-<p>gettimetable works!</p>
+<app-navbar></app-navbar>
+<div class="row mt-5 mb-3 mt-3 mr-3 ml-3">
+  <div class="col-md-2" *ngFor="let notes of listTimeTable">
+    <div class="card mt-3 mb-3" id="cardHeight">
+      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <a href="{{notes.file}}" download="{{notes.file}}">
+          <img src="{{notes.file}}" class="img-thumbnail img" alt="Responsive image"/>
+        </a>
+      </div>
+      <div class="card-body" id="crd">
+        <h6>Subject - {{notes.tittle}}</h6>
+        <h6>Tittle - {{notes.description}}</h6>
+        <h6>Year - {{notes.year}}</h6>
+      </div>
+      <div class="card-footer text-muted">
+        {{notes.timestamp | date :'short'}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
