@@ -1,1 +1,38 @@
-<p>uploadtimetable works!</p>
+<app-navbar></app-navbar>
+
+
+<br>
+<br>
+<div class="container">
+
+  <form *ngIf="isFaculty" [formGroup]="uploadTimetableForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="inputAddress2">Description</label>
+      <input type="text" class="form-control" id="inputAddress2" formControlName="description">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Tittle</label>
+      <input type="text" class="form-control" id="inputAddress2" formControlName="tittle" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Year</label>
+      <input type="text" class="form-control" id="inputAddress2" formControlName="year" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label for="file">Choose File</label>
+      <input type="file"
+             id="file" formControlName="file"
+             (change)="handleFileInput($event)"
+      >
+    </div>
+    <button type="submit" class="btn btn-primary">Upload Notes</button>
+
+  </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<app-footer></app-footer>

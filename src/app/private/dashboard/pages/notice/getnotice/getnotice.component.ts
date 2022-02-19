@@ -6,12 +6,8 @@ interface listNotice{
   file: string,
   id: number,
   remark: string,
-  sem: string,
-  subject: string,
-  subject_code: string,
   timestamp: string,
   user: number,
-  year: string,
 }
 
 @Component({

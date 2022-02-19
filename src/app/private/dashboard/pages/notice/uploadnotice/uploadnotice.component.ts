@@ -8,8 +8,6 @@ import {NoticeService} from "../notice.services";
 interface uploadnotice {
   remark: string,
   description: string,
-  subject: string,
-  subject_code: string,
   uploadNotice: File,
 }
 

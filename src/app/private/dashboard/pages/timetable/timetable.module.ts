@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { TimetableRoutingModule } from './timetable-routing.module';
 import {DashboardModule} from "../../dashboard.module";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {UploadtimetableComponent} from "./uploadtimetable/uploadtimetable.component";
+import {GettimetableComponent} from "./gettimetable/gettimetable.component";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    UploadtimetableComponent,
+    GettimetableComponent
+  ],
   imports: [
     CommonModule,
     TimetableRoutingModule,
