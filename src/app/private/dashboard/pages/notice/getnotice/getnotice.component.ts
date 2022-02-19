@@ -1,4 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import {NoticeService} from "../notice.services";
+
+interface listNotice{
+  description: string,
+  file: string,
+  id: number,
+  remark: string,
+  sem: string,
+  subject: string,
+  subject_code: string,
+  timestamp: string,
+  user: number,
+  year: string,
+}
 
 @Component({
   selector: 'app-getnotice',
@@ -7,9 +21,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetnoticeComponent implements OnInit {
 
-  constructor() { }
+  listNotice : listNotice[] = [];
+
+  constructor(private noticeService: NoticeService) {
+    this.getNotes();
+  }
 
   ngOnInit(): void {
   }
 
+  getNotes(){
+    this.noticeService.listNotice().subscribe(response => {
+      console.log(response);
+      this.listNotice = response;
+    })
+  }
 }
