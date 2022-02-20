@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<h3 class="text-center">Notice</h3>
+<div class="row mt-5 mb-3 mt-3 mr-3 ml-3">
+  <div class="col-md-2" *ngFor="let notice of listNotice">
+    <div class="card mt-3 mb-3" id="cardHeight">
+      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <a href="{{notice.file}}" download="{{notice.file}}">
+          <img src="{{notice.file}}" class="img-thumbnail img" alt="Responsive image"/>
+        </a>
+      </div>
+      <div class="card-body" id="crd">
+        <h6>Remark - {{notice.remark}}</h6>
+        <h6>Description - {{notice.description}}</h6>
+      </div>
+      <div class="card-footer text-muted">
+        {{notice.timestamp | date :'short'}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

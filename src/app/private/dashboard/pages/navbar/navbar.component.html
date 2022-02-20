@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light sunny-morning-gradient">
+  <a class="navbar-brand" href="/dashboard/home">Medi-Space</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/DashBoard/Home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Dashboard/Notes">Notes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Dashboard/Notice">Notice</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Dashboard/TimeTable">TimeTable</a>
+      </li>
+      <li>
+      <li class="nav-item dropdown" *ngIf="isFaculty">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Upload
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/Dashboard/Notes/UploadNotes">Notes</a>
+          <a class="dropdown-item" routerLink="/Dashboard/Notice/UploadNotice">Notice</a>
+          <a class="dropdown-item" routerLink="/Dashboard/TimeTable/UploadTimeTable">Time Table</a>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Navbar dropdown -->
+
+
+    <button class="btn btn-warning my-2 my-sm-0" type="submit" (click)="logout()">Logout</button>
+
+  </div>
+</nav>

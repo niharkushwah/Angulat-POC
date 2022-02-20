@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<h3 class="text-center">Notes</h3>
+<div class="row mt-5 mb-3 mt-3 mr-3 ml-3">
+  <div class="col-md-2" *ngFor="let notes of listNotes">
+    <div class="card mt-3 mb-3" id="cardHeight">
+      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <a href="{{notes.file}}" download="{{notes.file}}">
+        <img src="{{notes.file}}" class="img-thumbnail img" alt="Responsive image"/>
+        </a>
+      </div>
+      <div class="card-body" id="crd">
+        <h6>Subject - {{notes.subject}}</h6>
+        <h6>Subject Code - {{notes.subject_code}}</h6>
+        <h6>Sem - {{notes.sem}}</h6>
+        <h6>Year - {{notes.year}}</h6>
+<!--        <p>Remark - {{notes.remark}}</p>-->
+<!--        <p>Description - {{notes.description}}</p>-->
+      </div>
+      <div class="card-footer text-muted">
+        {{notes.timestamp | date :'short'}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
