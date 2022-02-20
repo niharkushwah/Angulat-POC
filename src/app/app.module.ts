@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './public/login/login.component';
@@ -10,6 +9,7 @@ import { RegisterComponent } from './public/register/register.component';
 import { RouterModule } from '@angular/router';
 import {AppRoutingModule} from "./app-routing.module";
 import {TokenInterceptor} from "./interceptor/token.interceptor";
+import {LoaderComponent} from "./components/loader/loader.component";
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import {TokenInterceptor} from "./interceptor/token.interceptor";
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
