@@ -1,8 +1,9 @@
 <app-navbar></app-navbar>
-<h3 class="text-center">Notes</h3>
-<div class="row mt-5 mb-3 mt-3 mr-3 ml-3">
+<h3 class="text-center mt-5">Notes</h3>
+<div class="sunny-morning-gradient" style="width: 150px; height: 5px; margin: 0 auto; border-radius: 10px"></div>
+<div class="row mr-3 mt-5 ml-3">
   <div class="col-md-2" *ngFor="let notes of listNotes">
-    <div class="card mt-3 mb-3" id="cardHeight">
+    <div class="card mb-3" id="cardHeight">
       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
         <a href="{{notes.file}}" download="{{notes.file}}">
         <img src="{{notes.file}}" class="img-thumbnail img" alt="Responsive image"/>
