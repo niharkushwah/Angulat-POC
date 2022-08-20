@@ -1,0 +1,44 @@
+[debug] [2022-08-20T13:18:28.278Z] ----------------------------------------------------------------------
+[debug] [2022-08-20T13:18:28.279Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\NIHAR\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-20T13:18:28.280Z] CLI Version:   11.7.0
+[debug] [2022-08-20T13:18:28.280Z] Platform:      win32
+[debug] [2022-08-20T13:18:28.280Z] Node Version:  v16.13.0
+[debug] [2022-08-20T13:18:28.281Z] Time:          Sat Aug 20 2022 18:48:28 GMT+0530 (India Standard Time)
+[debug] [2022-08-20T13:18:28.281Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-20T13:18:28.345Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-20T13:18:28.345Z] > authorizing via signed-in user (niharkushwah@gmail.com)
+[debug] [2022-08-20T13:18:28.346Z] [iam] checking project medi-space for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-20T13:18:28.348Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medi-space:testIamPermissions [none]
+[debug] [2022-08-20T13:18:28.348Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/medi-space:testIamPermissions x-goog-quota-user=projects/medi-space
+[debug] [2022-08-20T13:18:28.348Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medi-space:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-20T13:18:31.121Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medi-space:testIamPermissions 200
+[debug] [2022-08-20T13:18:31.122Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medi-space:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-20T13:18:31.123Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medi-space [none]
+[debug] [2022-08-20T13:18:32.315Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medi-space 200
+[debug] [2022-08-20T13:18:32.316Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medi-space {"projectId":"medi-space","projectNumber":"662113735829","displayName":"Medi-Space","name":"projects/medi-space","resources":{"hostingSite":"medi-space"},"state":"ACTIVE","etag":"1_10ad04d7-653d-42c4-9bae-606e1fd39e58"}
+[info] 
+[info] === Deploying to 'medi-space'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-20T13:18:32.322Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medi-space [none]
+[debug] [2022-08-20T13:18:33.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medi-space 200
+[debug] [2022-08-20T13:18:33.313Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medi-space {"projectId":"medi-space","projectNumber":"662113735829","displayName":"Medi-Space","name":"projects/medi-space","resources":{"hostingSite":"medi-space"},"state":"ACTIVE","etag":"1_10ad04d7-653d-42c4-9bae-606e1fd39e58"}
+[debug] [2022-08-20T13:18:33.316Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/662113735829/sites/medi-space/versions [none]
+[debug] [2022-08-20T13:18:33.316Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/662113735829/sites/medi-space/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-20T13:18:35.472Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/662113735829/sites/medi-space/versions 500
+[debug] [2022-08-20T13:18:35.472Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/662113735829/sites/medi-space/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2022-08-20T13:18:36.473Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
